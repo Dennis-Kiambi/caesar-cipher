@@ -31,6 +31,4 @@ public class Caesar {
         return c;
     }
 
-
-
 }
