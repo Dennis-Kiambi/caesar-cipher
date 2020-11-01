@@ -1,8 +1,12 @@
-import java.util.Scanner;
 import static java.lang.Character.isLowerCase;
 import static java.lang.Character.isUpperCase;
 public class Caesar {
     private static final int ALPHABET_SIZE = 26;
+
+    static String rotate() {
+        return null;
+    }
+
     public String cipher(String message, int rotateBy) {
         rotateBy %= ALPHABET_SIZE;
         char[] chars = message.toCharArray();
@@ -10,7 +14,7 @@ public class Caesar {
         return new String(chars);
     }
 
-    private void rotate(char[] chars, int rotateBy) {
+    private static void rotate(char[] chars, int rotateBy) {
         for (int i = 0; i < chars.length; ++i) {
             if (isLowerCase(chars[i])) {
                 chars[i] = rotateChar(chars[i], rotateBy, 'a', 'z');
@@ -20,7 +24,7 @@ public class Caesar {
         }
     }
 
-    private char rotateChar(char c, int rotateBy, char firstChar, char lastChar) {
+    private static char rotateChar(char c, int rotateBy, char firstChar, char lastChar) {
         c += rotateBy;
         if (c < firstChar) {
             return (char) (c + ALPHABET_SIZE);
